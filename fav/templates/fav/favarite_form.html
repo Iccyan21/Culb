@@ -1,0 +1,12 @@
+{% extends "app/base.html" %} 
+{% block content %}
+
+<h1>投稿しよう！！</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="投稿">
+</form>
+
+{% endblock %}

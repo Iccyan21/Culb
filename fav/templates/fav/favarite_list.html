@@ -1,0 +1,23 @@
+{% extends "app/base.html" %} 
+{% block content %}
+<h1 class = title >お知らせ一覧</h1>
+{% for Favarite in data %}
+<div class="container">
+    <div class ="sub_container">  
+        <h1 >{{ Favarite.title }}</h1>
+        <h2 >{{ Favarite.submitter }}</h2>
+        {% if Favarite.photo %}
+        <img src="{{ Favarite.photo.url }}" width="200px" height="200px"/>
+        {% endif %}
+        <h3>{{ Favarite.comment }}</h3>
+        <div class="time">
+            <h3>{{ Favarite.created_at }}</h3>
+        </div>
+        
+    </div>
+</div>
+{% endfor %}
+<div class ="link">
+    <a href="{% url 'form' %}">新規投稿</a>
+</div>
+{% endblock %}

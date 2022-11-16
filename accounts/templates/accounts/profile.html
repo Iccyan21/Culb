@@ -1,0 +1,40 @@
+{% extends 'app/base.html' %}
+{% block  content %}
+
+<div class ="card card-profile my-5 mx-auto">
+    <div class ="card-body">
+        <h5 class ="card-title text-center">プロフィール</h5>
+        <table class="profile_table mb-4">
+            <tbody>
+                <tr>
+                    <th class="header">名前</th>
+                    <td class="data">{{ user_data.username }}</td>
+                </tr>
+                <tr>
+                    <th class="header">メールアドレス</th>
+                    <td class="data">{{ user_data.email }}</td>
+                </tr>
+                <tr>
+                    <th class="header">学年</th>
+                    <td class="data">{{ user_data.school_year }}</td>
+                </tr>
+                <tr>
+                    <th class="header">クラス</th>
+                    <td class="data">{{ user_data.school_class }}</td>
+                </tr>
+                <tr>
+                    <th class="header">ポジション</th>
+                    <td class="data">{{ user_data.position }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="button mx-auto">
+          <a class="btn btn-lg btn-warning btn-block" href="{% url 'profile_edit' %}">編集する</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock  %}
+

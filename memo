@@ -1,0 +1,32 @@
+プロジェクトを開始する時django-admin startproject mysite . のように後ろに.をつけるとmanage.pyが外に作られる。
+
+
+必要なシステム
+1.指導者、選手の区別したアカウント
+2.予定表ベースのカレンダー
+3.日頃の練習のデータ、又は動画でみてもらえるようなシステム。
+4.次戦の対戦データの確認、又はデータを処理するシステム。
+
+5.連絡するためのチャット
+
+パスワードは数字英語含めた文字にすること！！djangoの使用のため
+
+
+スケジュールの処理
+https://blog.narito.ninja/detail/11/　から抜粋
+
+accountsの処理
+https://zenn.dev/hathle/books/django-customuser-book/viewer/05_profile から抜粋
+
+投稿機能の処理
+https://qiita.com/frosty/items/52a6d41c721c77a18e81　から抜粋
+fromappは投稿機能のアプリケーションです
+
+Redisサーバーの起動cd
+brew services start redis
+Redisサーバーの自動起動の解除cd
+brew services stop redis
+バックグラウンドサービスの再起動を行いたい場合cd 
+brew services restart redis
+Redisサーバーの停止
+redis-cli shutdown
